@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542349088 source:f:\beizercurve\main.cpp
+1542652207 source:f:\beizercurve\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<stdio.h>

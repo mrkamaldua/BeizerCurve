@@ -82,7 +82,7 @@ typedef struct
                     glFlush();
                     glPointSize(1.0f);
                     glColor3ub(255,0,0);
-          for(t=0;t<=1;t=t+0.005)
+          for(t=0;t<=1;t=t+0.01)
           {
           x=pow((1-t),3)*B[0].x+3*t*pow((1-t),2)*B[1].x+3*pow(t,2)*(1-t)*B[2].x+pow(t,3)*B[3].x;
           y=pow((1-t),3)*B[0].y+3*t*pow((1-t),2)*B[1].y+3*pow(t,2)*(1-t)*B[2].y+pow(t,3)*B[3].y;
@@ -113,10 +113,12 @@ typedef struct
      void display()
       {
        glClear(GL_COLOR_BUFFER_BIT);
+       glColor3ub(0,0,0);
+        printtext(200,480,"Use your Mouse to Drag These Four Points");
        if(drawBeizer==1)
        {
        beizerCode();
-       printtext(200,480,"Use your Mouse to Drag These Four Points");
+
        }
       }
       void init()
